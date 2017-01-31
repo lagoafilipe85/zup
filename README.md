@@ -1,6 +1,10 @@
 # Teste desenvolvedor 3 ZUP
 Autor Filipe A. Ribeiro
 
+Para o desenvolvimento foi usado o webservice WAMP, php 5.6
+
+A pasta publica está em /public/
+
 #Banco de dados
 
 crie a seguinte tabela
