@@ -1,0 +1,30 @@
+<div ng-controller="ModelosListaController">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th></th>
+				<th>id</th>
+				<th>Nome</th>
+				<th>Descrição</th>
+				<th>Preço</th>
+				<th>Categoria</th>
+				<th><i class="fa fa-pencil" aria-hidden="true" title="Editar"></i></th>
+				<th><i class="fa fa-trash" aria-hidden="true" title="Remover"></i></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="modelo in listModelos">
+				<td></td>
+				<td>{{modelo.id}}</td>
+				<td>{{modelo.name}}</td>
+				<td>{{modelo.description}}</td>
+				<td>{{modelo.price | currency}}</td>
+				<td>{{modelo.category}}</td>
+				<td><a href="modelo/{{modelo.id}}" title="Editar"><i class="fa fa-pencil" aria-hidden="true" title="Editar"></i></a>
+				<td><a href="#" title="Remover" onclick="return false;" ng-click="removeModelo(modelo.id)"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

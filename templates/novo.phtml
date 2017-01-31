@@ -1,0 +1,29 @@
+<div ng-controller="ModelosListaController">
+	<form name="modeloForm" ng-submit="submitNewForm()">
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="name">Nome</label>
+				<input type="text" class="form-control" id="name" placeholder="Nome do modelo" ng-model="newModelo.name">
+			</div>
+			<div class="form-group">
+				<label for="price">Preço</label>
+				<input type="text" class="form-control" id="price" placeholder="R$ 00,00" ng-model="newModelo.price">
+			</div>
+			<div class="form-group">
+				<label for="category">Categoria</label>
+				<input type="text" class="form-control" id="category" placeholder="Categoria" ng-model="newModelo.category">
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="description">Descrição</label>
+				<textarea class="form-control" id="description" ng-model="newModelo.description"></textarea>
+			</div>
+		</div>
+		<div class="col-sm-12">
+			<div class="pull-right">
+				<button type="submit" class="btn btn-success">Salvar</button>
+			</div>
+		</div>
+	</form>
+</div>

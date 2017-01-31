@@ -1,0 +1,34 @@
+<div ng-controller="ModeloController" ng-init="init(<?= htmlspecialchars($id); ?>)">
+	<h1>Modelo</h1>
+	<div class="row">
+		<form name="modeloForm" ng-submit="submitUpdateForm()">
+			
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="name">Nome</label>
+					<input type="text" class="form-control" id="name" placeholder="Nome do modelo" ng-model="modelo.name">
+				</div>
+				<div class="form-group">
+					<label for="price">Preço</label>
+					<input type="text" class="form-control" id="price" placeholder="R$ 00,00" ng-model="modelo.price">
+				</div>
+				<div class="form-group">
+					<label for="category">Categoria</label>
+					<input type="text" class="form-control" id="category" placeholder="Categoria" ng-model="modelo.category">
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="description">Descrição</label>
+					<textarea class="form-control" id="description" ng-model="modelo.description"></textarea>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="pull-right">
+					<button type="submit" class="btn btn-success">Salvar</button>
+					<button type="button" class="btn btn-danger" ng-click="removeModelo(modelo.id)">remover</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
