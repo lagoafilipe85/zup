@@ -1,26 +1,29 @@
-# Slim Framework 3 Skeleton Application
+# Teste desenvolvedor 3 ZUP
+Autor Filipe A. Ribeiro
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the PHP-View template renderer. It also uses the Monolog logger.
+#Banco de dados
 
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+crie a seguinte tabela
 
-## Install the Application
+DROP TABLE IF EXISTS `modelos`;
+CREATE TABLE `modelos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) DEFAULT NULL,
+  `description` text,
+  `price` double(8,2) DEFAULT NULL,
+  `category` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-Run this command from the directory in which you want to install your new Slim Framework application.
 
-    php composer.phar create-project slim/slim-skeleton [my-app-name]
+Configuração do banco de dados
 
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
+src/settings.php
 
-* Point your virtual host document root to your new application's `public/` directory.
-* Ensure `logs/` is web writeable.
-
-To run the application in development, you can also run this command. 
-
-	php composer.phar start
-
-Run this command to run the test suite
-
-	php composer.phar test
-
-That's it! Now go build something cool.
+Altere as informações de DB
+"db" => [
+            "host" => "localhost",
+            "dbname" => "zup",
+            "user" => "root",
+            "pass" => ""
+        ],
