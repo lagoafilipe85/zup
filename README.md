@@ -1,7 +1,7 @@
 # Teste desenvolvedor 3 ZUP
 Autor Filipe A. Ribeiro
 
-Para o desenvolvimento foi usado o webservice WAMP, php 5.6
+Para o desenvolvimento foi usado o webservice WAMP, php 5.6 e o SLIM Framework
 
 A pasta publica está em /public/
 
